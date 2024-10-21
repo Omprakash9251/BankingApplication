@@ -8,16 +8,17 @@ public class AccountMapper {
         Account account = new Account(
                 accountDto.getId(),
                 accountDto.getAccountHolderName(),
-                accountDto.getBalance());
+                accountDto.getBalance(),
+                accountDto.getTransactionRecords());
         return account;
     }
 
-    public static AccountDto maptoAccountDto(Account account){
+    public static AccountDto maptoAccountDto(Account account) {
         AccountDto accountDto = new AccountDto(
-            account.getId(),
-            account.getAccountHolderName(),
-            account.getBalance()
-        );
+                account.getId(),
+                account.getAccountHolderName(),
+                account.getBalance(),
+                account.getTransactionRecords());
         return accountDto;
     }
 }
